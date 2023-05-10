@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Text, View, Button, TextInput, FlatList, TouchableOpacity, Modal } from 'react-native';
+import { Button, FlatList, Modal, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { CustomModal, Events, Input } from './components/index';
+
 import { styles } from './styles';
-import { Events, Input, CustomModal } from './components/index';
+import { useState } from 'react';
 
 export default function App() {
   const [text, setText] = useState('');
@@ -44,7 +45,7 @@ export default function App() {
       <Text style={styles.titulo}>Lista de compras</Text>
       <Input 
         buttonColor='#52528C'
-        buttonTitle=' + '
+        buttonTitle=' ADD+ '
         onChangeText={(text) => setText(text)}
         onHandlerButton={onAddEvent}
         placeholder='Ingrese el producto' 
